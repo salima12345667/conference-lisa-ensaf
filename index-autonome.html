@@ -72,7 +72,7 @@ footer{background:#091a2a;color:#9fb3c8;padding:24px 0;font-size:12px}.foot{disp
 <footer><div class="wrap foot"><span>© 2026 · Journée scientifique – LISA / ENSAF</span><span>L’ingénieur Génie Industriel, acteur clé de la révolution digitale</span></div></footer>
 <script>
 const members = [
-["BENNOUNA","Fatima"],["ChALH","Zakaria"],["CHAIBI","Yassine"],["EL HAINI","Jamila"],["EL KHATTABI","Souad"],["FEKAK","Fatima-Ezzahra"],["HIHI","Hicham"],["KHAISSIDI","Ghizlane"],["MELLOULI","El Mehdi"],["MONTASSIR","Soufiane"],["MOUSTABCHIR","Hassane"],["MRABTI","Mostafa"],["OUGHDIR","Lahcen"],["OUHAIBI","Salma"],["SAKA","Abdelmajid"],["SALHI","Mohamed"],["Tahiri","Mohamed Amine"],["SAYYOURI","M’hamed"]
+ ["BENNOUNA","Fatima"],["ChALH","Zakaria"],["CHAIBI","Yassine"],["EL HAINI","Jamila"],["EL KHATTABI","Souad"],["FEKAK","Fatima-Ezzahra"],["GARZIAD","Mouad"],["HIHI","Hicham"],["KHAISSIDI","Ghizlane"],["MELLOULI","El Mehdi"],["MONTASSIR","Soufiane"],["MOUSTABCHIR","Hassane"],["MRABTI","Mostafa"],["OUGHDIR","Lahcen"],["OUHAIBI","Salma"],["SAKA","Abdelmajid"],["SALHI","Mohamed"],["Tahiri","Mohamed Amine"],["SAYYOURI","M’hamed"]
 ];
 function renderPeople(id){document.getElementById(id).innerHTML=members.map(([last,first])=>`<div class="person"><b>${first} ${last}</b><span>ENSAF</span></div>`).join("")}
 function showCommittee(id,btn){document.querySelectorAll('.committee-tabs .tab').forEach(x=>x.classList.remove('active'));btn.classList.add('active');document.getElementById('org').hidden=id!=='org';document.getElementById('sci').hidden=id!=='sci'}

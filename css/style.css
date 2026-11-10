@@ -1,25 +1,826 @@
-/* =========================================================
-   SITE DE LA JOURNEE SCIENTIFIQUE LISA - ENSAF
-   Fichier : css/style.css
 
-   MODIFICATIONS RAPIDES :
-   - Couleurs principales : section :root ci-dessous.
-   - Image de la grande bannière : règle .hero.
-   - Tailles, espacements et affichage mobile : règles CSS plus bas.
+/* =========================================================
+   SITE JOURNEE SCIENTIFIQUE LISA - ENSAF
+   IDENTITE : BLEU NUIT & ORANGE
    ========================================================= */
 
-:root{--navy:#102a43;--blue:#176b9b;--cyan:#26a6b8;--ink:#243b53;--muted:#627d98;--paper:#f5f8fb;--white:#fff;--line:#d9e2ec;--gold:#e8b44b;--shadow:0 18px 50px rgba(16,42,67,.10)}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:82px}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);line-height:1.65;background:#fff}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(217,226,236,.8)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--navy);letter-spacing:-.03em}.brand-logo{width:118px;height:48px;object-fit:contain;object-position:left center;display:block}.brand span{display:block}.brand small{display:block;font-size:10px;letter-spacing:.13em;color:var(--muted);font-weight:700}.links{display:flex;align-items:center;gap:22px;font-size:13px;font-weight:700;color:#486581}.links a:hover{color:var(--cyan)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:10px;background:var(--blue);color:#fff;font-weight:800;font-size:13px;border:1px solid var(--blue);transition:.2s}.nav-cta:hover,.btn:hover{transform:translateY(-2px);background:var(--navy)}.menu{display:none;background:none;border:0;font-size:25px;color:var(--navy)}
-.hero{position:relative;overflow:hidden;color:white;background:linear-gradient(90deg,rgba(5,22,40,.88) 0%,rgba(5,35,62,.72) 54%,rgba(5,35,62,.28) 100%),url('../images/fond-conference-industrie.png') center/cover no-repeat;padding:104px 0 92px}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,28,48,.24),transparent 42%);pointer-events:none}.hero-inner{position:relative;z-index:1;max-width:850px}.eyebrow{display:inline-flex;gap:9px;align-items:center;border:1px solid #ffffff55;background:#ffffff12;border-radius:100px;padding:7px 13px;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#d7f5f8}.eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--gold)}h1{font-size:clamp(38px,6vw,68px);line-height:1.08;letter-spacing:-.055em;margin:24px 0 22px;max-width:900px}.hero p{max-width:690px;color:#d6e6f0;font-size:17px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn.light{background:white;color:var(--navy);border-color:white}.btn.outline{background:transparent;border-color:#ffffff80}.facts{display:flex;gap:28px;flex-wrap:wrap;margin-top:50px;padding-top:24px;border-top:1px solid #ffffff35}.fact{display:flex;gap:10px;align-items:center;color:#e4f0f6;font-size:13px}.fact b{display:block;color:white;font-size:14px}.fact-icon{font-size:20px}
-section{padding:86px 0}.section-kicker{color:var(--cyan);font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}.section-title{font-size:clamp(28px,4vw,42px);line-height:1.15;letter-spacing:-.04em;color:var(--navy);margin:10px 0 14px}.section-intro{max-width:760px;color:var(--muted);margin:0 0 36px}.about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}.quote-card{background:linear-gradient(145deg,#edf7fa,#f4f8fb);padding:34px;border-radius:22px;border:1px solid #d8edf1;position:relative}.quote-card:before{content:"“";font-size:90px;line-height:.8;color:#9ed8df;font-family:Georgia;display:block}.quote-card p{font-size:18px;color:var(--navy);font-weight:650}.quote-card span{font-size:12px;color:var(--muted)}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:white;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 5px 18px #102a4308}.card-icon{width:44px;height:44px;border-radius:13px;background:#e8f5f7;color:var(--blue);display:grid;place-items:center;font-size:21px;margin-bottom:17px}.card h3{margin:0 0 8px;color:var(--navy);font-size:17px}.card p{margin:0;color:var(--muted);font-size:14px}.themes{background:var(--paper)}.theme-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.theme{display:flex;gap:18px;padding:25px;background:white;border:1px solid var(--line);border-radius:16px}.number{flex:0 0 44px;height:44px;border-radius:12px;background:var(--navy);color:white;display:grid;place-items:center;font-weight:900}.theme h3{margin:0 0 8px;color:var(--navy);font-size:17px}.theme ul{padding-left:18px;margin:0;color:var(--muted);font-size:13px}.theme li{margin:5px 0}
-.goals{background:linear-gradient(120deg,#102a43,#164d6d);color:white}.goals .section-title{color:white}.goals .section-intro{color:#c4d8e5}.goal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.goal{padding:20px;border:1px solid #ffffff2b;background:#ffffff0b;border-radius:14px}.goal strong{font-size:27px;color:#75d2d9;display:block;margin-bottom:8px}.goal p{font-size:13px;color:#d4e2eb;margin:0}
-.committees{background:var(--paper)}.committee-tabs{display:flex;gap:8px;margin:25px 0}.tab{border:1px solid var(--line);border-radius:999px;padding:10px 17px;background:white;color:var(--muted);font-weight:800;cursor:pointer}.tab.active{background:var(--navy);border-color:var(--navy);color:white}.people{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.person{background:white;border:1px solid var(--line);border-radius:12px;padding:15px}.person b{display:block;color:var(--navy);font-size:13px}.person span{font-size:12px;color:var(--muted)}.committee-note{font-size:12px;color:var(--muted);margin-top:14px}
-.host{display:grid;grid-template-columns:1fr 1fr;gap:24px}.host-panel{padding:30px;border-radius:18px;background:var(--paper);border:1px solid var(--line)}.host-panel h3{color:var(--navy);margin:0 0 10px}.host-panel p{color:var(--muted);font-size:14px;margin:0}.host-tag{display:inline-block;margin-top:18px;padding:7px 11px;border-radius:8px;background:#e4f4f6;color:#176b9b;font-size:11px;font-weight:900}
-.call{background:#eef7f9}.call-grid{display:grid;grid-template-columns:1fr .85fr;gap:30px;align-items:start}.requirements{background:white;border:1px solid var(--line);padding:25px;border-radius:16px}.requirements li{margin:9px 0;color:var(--muted);font-size:14px}.deadline{border-left:3px solid var(--gold);padding:13px 16px;background:#fff9ec;border-radius:0 10px 10px 0;margin:18px 0}.deadline b{color:var(--navy)}.notice{font-size:12px;color:#805d19;background:#fff5dd;padding:12px 14px;border-radius:9px;margin-top:14px}
-.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.datebox{border:1px solid var(--line);border-radius:14px;padding:21px}.datebox strong{font-size:23px;color:var(--blue);display:block}.datebox span{font-size:13px;color:var(--muted)}
-.contact{background:var(--navy);color:white}.contact .section-title{color:white}.contact .section-intro{color:#c4d8e5}.contact-box{border:1px solid #ffffff35;background:#ffffff0b;padding:25px;border-radius:16px;display:flex;justify-content:space-between;gap:20px;align-items:center}.contact-box p{margin:0;color:#d4e2eb;font-size:14px}
-footer{background:#091a2a;color:#9fb3c8;padding:24px 0;font-size:12px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-@media(max-width:900px){.links{display:none;position:absolute;top:76px;left:0;right:0;background:white;padding:20px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.links.open{display:flex}.menu{display:block}.nav-cta{display:none}.about-grid,.call-grid,.host{grid-template-columns:1fr}.goal-grid{grid-template-columns:repeat(2,1fr)}.people{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:600px){.brand-logo{width:82px;height:40px}.brand{gap:7px;font-size:12px}.brand small{font-size:8px}.wrap{width:min(100% - 28px,1160px)}.hero{padding:76px 0 65px}section{padding:65px 0}.grid-3,.theme-grid,.timeline{grid-template-columns:1fr}.goal-grid{grid-template-columns:1fr 1fr}.people{grid-template-columns:repeat(2,1fr)}.facts{gap:16px}.contact-box{align-items:flex-start;flex-direction:column}.quote-card{padding:24px}}
+/* 1. PALETTE GENERALE */
+
+:root {
+  --navy: #10243A;
+  --blue: #193B59;
+  --cyan: #E98232;
+  --ink: #26384A;
+  --muted: #647487;
+
+  --paper: #F7F8FA;
+  --white: #FFFFFF;
+  --line: #E1E6EC;
+
+  --gold: #F0A04B;
+  --shadow: 0 18px 50px rgba(16,36,58,.08);
+}
+
+/* 2. BASE */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 82px;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui,
+    -apple-system, "Segoe UI", sans-serif;
+  color: var(--ink);
+  line-height: 1.65;
+  background: var(--white);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrap {
+  width: min(1160px, calc(100% - 40px));
+  margin: auto;
+}
+
+/* 3. NAVIGATION */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255,255,255,.97);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -.03em;
+}
+
+.brand-logo {
+  width: 118px;
+  height: 48px;
+  object-fit: contain;
+  object-position: left center;
+  display: block;
+}
+
+.brand span {
+  display: block;
+}
+
+.brand small {
+  display: block;
+  font-size: 10px;
+  letter-spacing: .13em;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #486581;
+}
+
+.links a {
+  transition: color .2s;
+}
+
+.links a:hover {
+  color: var(--cyan);
+}
+
+.nav-cta,
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 9px;
+  background: var(--cyan);
+  color: white;
+  font-weight: 800;
+  font-size: 13px;
+  border: 1px solid var(--cyan);
+  transition: .2s;
+}
+
+.nav-cta:hover,
+.btn:hover {
+  transform: translateY(-2px);
+  background: var(--navy);
+  border-color: var(--navy);
+}
+
+.menu {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 25px;
+  color: var(--navy);
+}
+
+/* 4. HERO / BANNIERE PRINCIPALE */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  color: white;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10,27,45,.91) 0%,
+      rgba(16,36,58,.78) 54%,
+      rgba(16,36,58,.40) 100%
+    ),
+    url('../images/fond-conference-industrie.png')
+    center / cover no-repeat;
+
+  padding: 104px 0 92px;
+}
+
+.hero:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    0deg,
+    rgba(10,27,45,.25),
+    transparent 42%
+  );
+
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 850px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  gap: 9px;
+  align-items: center;
+  border: 1px solid #ffffff55;
+  background: #ffffff12;
+  border-radius: 100px;
+  padding: 7px 13px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #FFE0C2;
+}
+
+.eyebrow i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+h1 {
+  font-size: clamp(38px,6vw,68px);
+  line-height: 1.08;
+  letter-spacing: -.055em;
+  margin: 24px 0 22px;
+  max-width: 900px;
+}
+
+.hero p {
+  max-width: 690px;
+  color: #E0E8F0;
+  font-size: 17px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.btn.light {
+  background: white;
+  color: var(--navy);
+  border-color: white;
+}
+
+.btn.light:hover {
+  background: #FFE8D5;
+  border-color: #FFE8D5;
+  color: var(--navy);
+}
+
+.btn.outline {
+  background: transparent;
+  border-color: #ffffff80;
+}
+
+.btn.outline:hover {
+  background: var(--cyan);
+  border-color: var(--cyan);
+}
+
+.facts {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  padding-top: 24px;
+  border-top: 1px solid #ffffff35;
+}
+
+.fact {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #E4EDF5;
+  font-size: 13px;
+}
+
+.fact b {
+  display: block;
+  color: white;
+  font-size: 14px;
+}
+
+.fact-icon {
+  font-size: 20px;
+}
+
+/* 5. SECTIONS */
+
+section {
+  padding: 86px 0;
+}
+
+.section-kicker {
+  color: var(--cyan);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: clamp(28px,4vw,42px);
+  line-height: 1.15;
+  letter-spacing: -.04em;
+  color: var(--navy);
+  margin: 10px 0 14px;
+}
+
+.section-intro {
+  max-width: 760px;
+  color: var(--muted);
+  margin: 0 0 36px;
+}
+
+/* 6. PRESENTATION DU LABORATOIRE */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.quote-card {
+  background: linear-gradient(145deg,#FFF5ED,#F7F8FA);
+  padding: 34px;
+  border-radius: 18px;
+  border: 1px solid #F2D9C5;
+  position: relative;
+}
+
+.quote-card:before {
+  content: "“";
+  font-size: 90px;
+  line-height: .8;
+  color: #E9AD7B;
+  font-family: Georgia;
+  display: block;
+}
+
+.quote-card p {
+  font-size: 18px;
+  color: var(--navy);
+  font-weight: 650;
+}
+
+.quote-card span {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* 7. CARTES */
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 18px;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 5px 18px #10243A08;
+  transition: .25s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: #E8B58E;
+}
+
+.card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 11px;
+  background: #FFF0E4;
+  color: var(--cyan);
+  display: grid;
+  place-items: center;
+  font-size: 21px;
+  margin-bottom: 17px;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  color: var(--navy);
+  font-size: 17px;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* 8. AXES THEMATIQUES */
+
+.themes {
+  background: var(--paper);
+}
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 16px;
+}
+
+.theme {
+  display: flex;
+  gap: 18px;
+  padding: 25px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  transition: .2s;
+}
+
+.theme:hover {
+  border-color: #E8B58E;
+  box-shadow: 0 8px 24px #10243A0A;
+}
+
+.number {
+  flex: 0 0 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--navy);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  border-bottom: 3px solid var(--cyan);
+}
+
+.theme h3 {
+  margin: 0 0 8px;
+  color: var(--navy);
+  font-size: 17px;
+}
+
+.theme ul {
+  padding-left: 18px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.theme li {
+  margin: 5px 0;
+}
+
+/* 9. OBJECTIFS */
+
+.goals {
+  background: var(--navy);
+  color: white;
+}
+
+.goals .section-title {
+  color: white;
+}
+
+.goals .section-intro {
+  color: #C7D4E0;
+}
+
+.goal-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 14px;
+}
+
+.goal {
+  padding: 20px;
+  border: 1px solid #ffffff28;
+  background: #ffffff09;
+  border-radius: 12px;
+  transition: .2s;
+}
+
+.goal:hover {
+  background: #ffffff13;
+  border-color: var(--cyan);
+}
+
+.goal strong {
+  font-size: 27px;
+  color: #F3A15D;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.goal p {
+  font-size: 13px;
+  color: #D4E0EA;
+  margin: 0;
+}
+
+/* 10. COMITES */
+
+.committees {
+  background: var(--paper);
+}
+
+.committee-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 25px 0;
+}
+
+.tab {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 10px 17px;
+  background: white;
+  color: var(--muted);
+  font-weight: 800;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.tab:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+.tab.active {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: white;
+}
+
+.people {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 12px;
+}
+
+.committee-group + .committee-group {
+  margin-top: 30px;
+}
+
+.committee-heading {
+  margin: 0 0 14px;
+  color: var(--navy);
+  font-size: 18px;
+}
+
+.person {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  padding: 15px;
+}
+
+.person b {
+  display: block;
+  color: var(--navy);
+  font-size: 13px;
+}
+
+.person span {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.committee-note {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 14px;
+}
+
+/* 11. ORGANISATION */
+
+.host {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.host-panel {
+  padding: 30px;
+  border-radius: 16px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+
+.host-panel h3 {
+  color: var(--navy);
+  margin: 0 0 10px;
+}
+
+.host-panel p {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0;
+}
+
+.host-tag {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 7px 11px;
+  border-radius: 7px;
+  background: #FFF0E4;
+  color: #B85B1D;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+/* 12. APPEL A COMMUNICATION */
+
+.call {
+  background: #F4F6F9;
+}
+
+.call-grid {
+  display: grid;
+  grid-template-columns: 1fr .85fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.requirements {
+  background: white;
+  border: 1px solid var(--line);
+  padding: 25px;
+  border-radius: 14px;
+}
+
+.requirements li {
+  margin: 9px 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.deadline {
+  border-left: 3px solid var(--cyan);
+  padding: 13px 16px;
+  background: #FFF5EC;
+  border-radius: 0 9px 9px 0;
+  margin: 18px 0;
+}
+
+.deadline b {
+  color: var(--navy);
+}
+
+.notice {
+  font-size: 12px;
+  color: #80501D;
+  background: #FFF1DB;
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin-top: 14px;
+}
+
+/* 13. PROGRAMME ET DATES */
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 14px;
+}
+
+.datebox {
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  padding: 21px;
+  background: white;
+}
+
+.datebox strong {
+  font-size: 23px;
+  color: var(--cyan);
+  display: block;
+}
+
+.datebox span {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* 14. CONTACT */
+
+.contact {
+  background: var(--navy);
+  color: white;
+}
+
+.contact .section-title {
+  color: white;
+}
+
+.contact .section-intro {
+  color: #C7D4E0;
+}
+
+.contact-box {
+  border: 1px solid #ffffff35;
+  background: #ffffff0A;
+  padding: 25px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.contact-box p {
+  margin: 0;
+  color: #D4E0EA;
+  font-size: 14px;
+}
+
+/* 15. FOOTER */
+
+footer {
+  background: #091725;
+  color: #A8B7C7;
+  padding: 24px 0;
+  font-size: 12px;
+}
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* 16. RESPONSIVE */
+
+@media(max-width:900px) {
+
+  .links {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .links.open {
+    display: flex;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .about-grid,
+  .call-grid,
+  .host {
+    grid-template-columns: 1fr;
+  }
+
+  .goal-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .people {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+@media(max-width:600px) {
+
+  .brand-logo {
+    width: 82px;
+    height: 40px;
+  }
+
+  .brand {
+    gap: 7px;
+    font-size: 12px;
+  }
+
+  .brand small {
+    font-size: 8px;
+  }
+
+  .wrap {
+    width: min(100% - 28px,1160px);
+  }
+
+  .hero {
+    padding: 76px 0 65px;
+  }
+
+  section {
+    padding: 65px 0;
+  }
+
+  .grid-3,
+  .theme-grid,
+  .timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .goal-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .people {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .facts {
+    gap: 16px;
+  }
+
+  .contact-box {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .quote-card {
+    padding: 24px;
+  }
+}
