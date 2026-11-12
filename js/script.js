@@ -38,7 +38,7 @@ const orgMembers = [
     ["OUYOUS (doctorante)", "Souhaila"],
     ["BAKKALI (doctorante)", "Fatimazahra"],
     ["ZIZI (doctorante)", "Fatimazahra"],
-    ["FECHTALI (doctorant)", "Reda"]
+    ["FECHTALI (doctorant)", "Reda"],
 ];
 
 const sciMembers = [
