@@ -30,15 +30,15 @@ const orgMembers = [
     ["SAYYOURI", "M'hamed"],
 
     // NOUVEAUX MEMBRES DU COMITÉ D'ORGANISATION
-    ["HANDA", "Salima", "HANDA Salima (doctorante)"],
-    ["EL AMRANI", "Mohamed", "EL AMRANI Mohamed (doctorant)"],
-    ["KACIMI", "Sara", "KACIMI Sara (doctorante)"],
-    ["SABOR", "Fatimazahra", "SABOR Fatimazahra (doctorante)"],
-    ["AZILA", "Rania", "AZILA Rania (doctorante)"],
-    ["OUYOUS", "Souhaila", "OUYOUS Souhaila (doctorante)"],
-    ["BAKKALI", "Fatimazahra", "BAKKALI Fatimazahra (doctorante)"],
-    ["ZIZI", "Fatimazahra", "ZIZI Fatimazahra (doctorante)"],
-    ["FECHTALI", "Reda", "FECHTALI Reda (doctorant)"]
+    ["HANDA (doctorante)", "Salima"],
+    ["EL AMRANI (doctorant)", "Mohamed],
+    ["KACIMI (doctorante)", "Sara"],
+    ["SABOR (doctorante)", "Fatimazahra"],
+    ["AZILA (doctorante)", "Rania"],
+    ["OUYOUS (doctorante)", "Souhaila"],
+    ["BAKKALI (doctorante)", "Fatimazahra"],
+    ["ZIZI (doctorante)", "Fatimazahra"],
+    ["FECHTALI (doctorant)", "Reda"]
 ];
 
 const sciMembers = [
