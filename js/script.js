@@ -1,17 +1,18 @@
 
 /* =========================================================
-   SITE DE LA JOURNEE SCIENTIFIQUE LISA - ENSAF
+   SITE DE LA JOURNÉE SCIENTIFIQUE LISA - ENSAF
    Fichier : js/script.js
 
    MODIFICATIONS :
    - Mise à jour du comité d'organisation
    - Ajout de 9 nouveaux membres
+   - Ajout des statuts doctorant / doctorante
    - Comité scientifique conservé
    ========================================================= */
 
 const orgMembers = [
     ["BENNOUNA", "Fatima"],
-    ["ChALH", "Zakaria"],
+    ["CHALH", "Zakaria"],
     ["CHAIBI", "Yassine"],
     ["EL HAINI", "Jamila"],
     ["EL KHATTABI", "Souad"],
@@ -26,15 +27,24 @@ const orgMembers = [
     ["OUHAIBI", "Salma"],
     ["SAKA", "Abdelmajid"],
     ["SALHI", "Mohamed"],
-    ["Tahiri", "Mohamed Amine"],
+    ["TAHIRI", "Mohamed Amine"],
     ["SAYYOURI", "M'hamed"],
 
-
+    // NOUVEAUX MEMBRES DU COMITÉ D'ORGANISATION
+    ["HANDA", "Salima", "doctorante"],
+    ["EL AMRANI", "Mohamed", "doctorant"],
+    ["KACIMI", "Sara", "doctorante"],
+    ["SABOR", "Fatimazahra", "doctorante"],
+    ["AZILA", "Rania", "doctorante"],
+    ["OUYOUS", "Souhaila", "doctorante"],
+    ["BAKKALI", "Fatimazahra", "doctorante"],
+    ["ZIZI", "Fatimazahra", "doctorante"],
+    ["FECHTALI", "Reda", "doctorant"]
 ];
 
 const sciMembers = [
     ["BENNOUNA", "Fatima"],
-    ["ChALH", "Zakaria"],
+    ["CHALH", "Zakaria"],
     ["CHAIBI", "Yassine"],
     ["EL HAINI", "Jamila"],
     ["EL KHATTABI", "Souad"],
@@ -50,8 +60,8 @@ const sciMembers = [
     ["OUHAIBI", "Salma"],
     ["SAKA", "Abdelmajid"],
     ["SALHI", "Mohamed"],
-    ["Tahiri", "Mohamed Amine"],
-    ["SAYYOURI", "M’hamed"]
+    ["TAHIRI", "Mohamed Amine"],
+    ["SAYYOURI", "M'hamed"]
 ];
 
 // AFFICHAGE DES MEMBRES
@@ -61,9 +71,9 @@ function renderPeople(id, committeeMembers) {
     if (!container) return;
 
     container.innerHTML = committeeMembers
-        .map(([last, first]) => `
+        .map(([last, first, status]) => `
             <div class="person">
-                <b>${first} ${last}</b>
+                <b>${last} ${first}${status ? ` (${status})` : ""}</b>
                 <span>ENSAF</span>
             </div>
         `)
@@ -77,6 +87,6 @@ renderPeople("sci", sciMembers);
 // FERMETURE DU MENU MOBILE APRÈS NAVIGATION
 document.querySelectorAll("#navlinks a").forEach(a => {
     a.addEventListener("click", () => {
-        document.getElementById("navlinks").classList.remove("open");
+        document.getElementById("navlinks")?.classList.remove("open");
     });
 });
