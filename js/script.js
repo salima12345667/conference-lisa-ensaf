@@ -31,7 +31,7 @@ const orgMembers = [
     ["SAYYOURI", "M'hamed"],
 
     // NOUVEAUX MEMBRES DU COMITÉ D'ORGANISATION
-    ["HANDA(doctorante)", "Salima"],
+    ["HANDA", "Salima","(doctorante)"],
     ["EL AMRANI", "Mohamed", "doctorant"],
     ["KACIMI", "Sara", "doctorante"],
     ["SABOR", "Fatimazahra", "doctorante"],
