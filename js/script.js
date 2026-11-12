@@ -29,16 +29,7 @@ const orgMembers = [
     ["Tahiri", "Mohamed Amine"],
     ["SAYYOURI", "M'hamed"],
 
-    // NOUVEAUX MEMBRES DU COMITÉ D'ORGANISATION
-    ["HANDA (doctorante)", "Salima"],
-    ["EL AMRANI (doctorant)", "Mohamed],
-    ["KACIMI (doctorante)", "Sara"],
-    ["SABOR (doctorante)", "Fatimazahra"],
-    ["AZILA (doctorante)", "Rania"],
-    ["OUYOUS (doctorante)", "Souhaila"],
-    ["BAKKALI (doctorante)", "Fatimazahra"],
-    ["ZIZI (doctorante)", "Fatimazahra"],
-    ["FECHTALI (doctorant)", "Reda"],
+
 ];
 
 const sciMembers = [
