@@ -4,14 +4,16 @@
    Fichier : js/script.js
 
    MODIFICATIONS :
-   - Mise à jour du comité d'organisation
-   - Ajout de 9 nouveaux membres
-   - Ajout des statuts doctorant / doctorante
-   - Comité scientifique conservé
+   - Réorganisation des deux comités
+   - BENNOUNA, SAKA et MOUSTABCHIR en tête des deux listes
+   - Correction du statut de FECHTALI Reda
    ========================================================= */
 
 const orgMembers = [
     ["BENNOUNA", "Fatima"],
+    ["SAKA", "Abdelmajid"],
+    ["MOUSTABCHIR", "Hassane"],
+
     ["CHALH", "Zakaria"],
     ["CHAIBI", "Yassine"],
     ["EL HAINI", "Jamila"],
@@ -21,17 +23,15 @@ const orgMembers = [
     ["KHAISSIDI", "Ghizlane"],
     ["MELLOULI", "El Mehdi"],
     ["MONTASSIR", "Soufiane"],
-    ["MOUSTABCHIR", "Hassane"],
     ["MRABTI", "Mostafa"],
     ["OUGHDIR", "Lahcen"],
     ["OUHAIBI", "Salma"],
-    ["SAKA", "Abdelmajid"],
     ["SALHI", "Mohamed"],
     ["TAHIRI", "Mohamed Amine"],
     ["SAYYOURI", "M'hamed"],
 
-    // NOUVEAUX MEMBRES DU COMITÉ D'ORGANISATION
-    ["HANDA", "Salima","doctorante"],
+    // Membres du comité d'organisation
+    ["HANDA", "Salima", "doctorante"],
     ["EL AMRANI", "Mohamed", "doctorant"],
     ["KACIMI", "Sara", "doctorante"],
     ["SABOR", "Fatimazahra", "doctorante"],
@@ -39,11 +39,14 @@ const orgMembers = [
     ["OUYOUS", "Souhaila", "doctorante"],
     ["BAKKALI", "Fatimazahra", "doctorante"],
     ["ZIZI", "Fatimazahra", "doctorante"],
-    ["FECHTALI", "Reda", "doctorant"]
+    ["FECHTALI", "Reda", "élève ingénieur"]
 ];
 
 const sciMembers = [
     ["BENNOUNA", "Fatima"],
+    ["SAKA", "Abdelmajid"],
+    ["MOUSTABCHIR", "Hassane"],
+
     ["CHALH", "Zakaria"],
     ["CHAIBI", "Yassine"],
     ["EL HAINI", "Jamila"],
@@ -54,11 +57,9 @@ const sciMembers = [
     ["KHAISSIDI", "Ghizlane"],
     ["MELLOULI", "El Mehdi"],
     ["MONTASSIR", "Soufiane"],
-    ["MOUSTABCHIR", "Hassane"],
     ["MRABTI", "Mostafa"],
     ["OUGHDIR", "Lahcen"],
     ["OUHAIBI", "Salma"],
-    ["SAKA", "Abdelmajid"],
     ["SALHI", "Mohamed"],
     ["TAHIRI", "Mohamed Amine"],
     ["SAYYOURI", "M'hamed"]
