@@ -19,7 +19,8 @@ const honorMembers = [
     ["Pr. Mestapha El Hadrami", "Vice-président de l'USMBA chargé du pôle recherche scientifique"],
     ["Pr. Abderrahim Lahrach", "Directeur de l'ENSA de Fès"],
     ["Pr. Abdelmjid Saka", "Directeur Adjoint chargé de la recherche scientifique de l'ENSA de Fès"],
-    ["Pr. Moustabchir Hassane", "Directeur du laboratoire LISA"]
+    ["Pr. Hassane Moustabchir", "Directeur du laboratoire LISA"],
+    ["Pr. Fatima Bennouna", "Coordinatrice de la journée"]
 ];
 
 // =========================================================
