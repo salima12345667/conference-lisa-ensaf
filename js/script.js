@@ -54,6 +54,7 @@ const orgMembers = [
     ["SABOR", "Fatimazahra", "doctorante"],
     ["AZILA", "Rania", "doctorante"],
     ["OUYOUSS", "Souhaila", "doctorante"],
+     ["OUYOUSSEF", "Nouhaila", "Docteur"],
     ["BAKKALI", "Fatimazahra", "doctorante"],
     ["ZIZI", "Fatimazahra", "doctorante"],
     ["FECHTALI", "Reda", "élève ingénieur"]
