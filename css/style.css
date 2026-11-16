@@ -1,3 +1,4 @@
+
 /* =========================================================
    SITE JOURNEE SCIENTIFIQUE LISA - ENSAF
    IDENTITE : BLEU NUIT & ORANGE
@@ -48,6 +49,12 @@ a {
 .wrap {
   width: min(1160px, calc(100% - 40px));
   margin: auto;
+}
+
+/* JUSTIFICATION DE TOUS LES PARAGRAPHES */
+
+p {
+  text-align: justify;
 }
 
 /* 3. NAVIGATION */
@@ -590,17 +597,6 @@ section {
   color: var(--muted);
   font-size: 14px;
   margin: 0;
-}
-
-.host-tag {
-  display: inline-block;
-  margin-top: 18px;
-  padding: 7px 11px;
-  border-radius: 7px;
-  background: #FFF0E4;
-  color: #B85B1D;
-  font-size: 11px;
-  font-weight: 900;
 }
 
 /* 12. APPEL A COMMUNICATION */
