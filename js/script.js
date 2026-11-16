@@ -4,10 +4,27 @@
    Fichier : js/script.js
 
    MODIFICATIONS :
-   - Réorganisation des deux comités
+   - Ajout du comité d'honneur
+   - Comité d'honneur affiché avant le comité d'organisation
    - BENNOUNA, SAKA et MOUSTABCHIR en tête des deux listes
    - Correction du statut de FECHTALI Reda
    ========================================================= */
+
+// =========================================================
+// COMITÉ D'HONNEUR
+// =========================================================
+
+const honorMembers = [
+    ["Pr. Mustapha Ijjaali", "Président de l'USMBA"],
+    ["Pr. Mestapha El Hadrami", "Vice-président de l'USMBA chargé du pôle recherche scientifique"],
+    ["Pr. Abderrahim Lahrach", "Directeur de l'ENSA de Fès"],
+    ["Pr. Abdelmjid Saka", "Directeur Adjoint chargé de la recherche scientifique de l'ENSA de Fès"],
+    ["Pr. Moustabchir Hassane", "Directeur du laboratoire LISA"]
+];
+
+// =========================================================
+// COMITÉ D'ORGANISATION
+// =========================================================
 
 const orgMembers = [
     ["BENNOUNA", "Fatima"],
@@ -36,11 +53,15 @@ const orgMembers = [
     ["KACIMI", "Sara", "doctorante"],
     ["SABOR", "Fatimazahra", "doctorante"],
     ["AZILA", "Rania", "doctorante"],
-    ["OUYOUS", "Souhaila", "doctorante"],
+    ["OUYOUSS", "Souhaila", "doctorante"],
     ["BAKKALI", "Fatimazahra", "doctorante"],
     ["ZIZI", "Fatimazahra", "doctorante"],
     ["FECHTALI", "Reda", "élève ingénieur"]
 ];
+
+// =========================================================
+// COMITÉ SCIENTIFIQUE
+// =========================================================
 
 const sciMembers = [
     ["BENNOUNA", "Fatima"],
@@ -65,7 +86,10 @@ const sciMembers = [
     ["SAYYOURI", "M'hamed"]
 ];
 
-// AFFICHAGE DES MEMBRES
+// =========================================================
+// AFFICHAGE DES MEMBRES DES COMITÉS
+// =========================================================
+
 function renderPeople(id, committeeMembers) {
     const container = document.getElementById(id);
 
@@ -81,11 +105,37 @@ function renderPeople(id, committeeMembers) {
         .join("");
 }
 
-// AFFICHAGE DES DEUX COMITÉS
+// =========================================================
+// AFFICHAGE DU COMITÉ D'HONNEUR
+// =========================================================
+
+function renderHonorMembers(id, members) {
+    const container = document.getElementById(id);
+
+    if (!container) return;
+
+    container.innerHTML = members
+        .map(([name, role]) => `
+            <div class="person">
+                <b>${name}</b>
+                <span>${role}</span>
+            </div>
+        `)
+        .join("");
+}
+
+// =========================================================
+// AFFICHAGE DES TROIS COMITÉS
+// =========================================================
+
+renderHonorMembers("honor", honorMembers);
 renderPeople("org", orgMembers);
 renderPeople("sci", sciMembers);
 
+// =========================================================
 // FERMETURE DU MENU MOBILE APRÈS NAVIGATION
+// =========================================================
+
 document.querySelectorAll("#navlinks a").forEach(a => {
     a.addEventListener("click", () => {
         document.getElementById("navlinks")?.classList.remove("open");
